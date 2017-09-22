@@ -1,5 +1,8 @@
 const routes = {
-  '/': 'Home',
-  '/dashboard': 'Dashboard'
+    '/': 'Home',
+    '/wipclose': 'Wip Close',
+    '/crosscheck': 'Cross Check',
+    '/productionresult': 'Production Result',
+    '/kpi': 'KPI'
 };
 export default routes;
