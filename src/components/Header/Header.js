@@ -41,13 +41,17 @@ class Header extends Component {
                 <NavbarToggler className="d-md-down-none mr-auto" onClick={this.sidebarToggle}>&#9776;</NavbarToggler>
                 <Form inline>
                     <FormGroup >
-                        <Label for="fromDate">From Date </Label>{' '}
-                        <Input type="date" name="fromDate" id="fromDate" />
-                    </FormGroup>{' '}
+                        <Label for="inputMonth">Month </Label>
+                        <Input type="text" name="inputMonth" id="inputMonth" />
+                    </FormGroup>
+                    <FormGroup >
+                        <Label for="inputFromDate">From Date </Label>
+                        <Input type="date" name="inputFromDate" id="inputFromDate" />
+                    </FormGroup>
                     <FormGroup>
-                        <Label for="toDate">To Date </Label>{' '}
-                        <Input type="date" name="toDate" id="toDate" />
-                    </FormGroup>{' '}
+                        <Label for="inputToDate">To Date </Label>
+                        <Input type="date" name="inputToDate" id="inputToDate" />
+                    </FormGroup>
                     <Button color="primary">SEARCH</Button>
                     <Button color="success">REFRESH</Button>
                 </Form>

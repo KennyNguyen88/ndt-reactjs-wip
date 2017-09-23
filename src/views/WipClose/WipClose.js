@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Container,
+import {
+    Container,
     Row,
     Col,
     Card,
@@ -23,28 +24,50 @@ class WipClose extends Component {
                     <Row>
                         <Col sm={3}>
                             <Card>
-                                <CardTitle>IF Status <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">IF Status</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                </div>
                                 <CardBlock>
                                     <ListGroup>
                                         <ListGroupItem>
-                                            <p>NEW</p>
-                                            <p>New</p>
-                                            <Badge pill>4</Badge>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0 text-left">NEW</p>
+                                                    <p className="mb-0 font-italic text-left">New</p>
+                                                </div>
+                                                <Badge pill color="primary">4</Badge>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>NEW</p>
-                                            <p>New</p>
-                                            <Badge pill>4</Badge>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0 text-left">NEW</p>
+                                                    <p className="mb-0 font-italic text-left">New</p>
+                                                </div>
+                                                <Badge pill color="primary">4</Badge>
+                                            </div>
+
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>NEW</p>
-                                            <p>New</p>
-                                            <Badge pill>4</Badge>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0 text-left">NEW</p>
+                                                    <p className="mb-0 font-italic text-left">New</p>
+                                                </div>
+                                                <Badge pill color="primary">4</Badge>
+                                            </div>
+
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>NEW</p>
-                                            <p>New</p>
-                                            <Badge pill>4</Badge>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0 text-left ">NEW</p>
+                                                    <p className="mb-0 font-italic text-left">New</p>
+                                                </div>
+                                                <Badge pill color="primary">4</Badge>
+                                            </div>
+
                                         </ListGroupItem>
                                     </ListGroup>
                                 </CardBlock>
@@ -52,38 +75,106 @@ class WipClose extends Component {
                         </Col>
                         <Col sm={3}>
                             <Card>
-                                <CardTitle>OIT <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">OIT</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                </div>
                                 <CardBlock>
                                     <ListGroup>
                                         <ListGroupItem>
-                                            <p>Mtl.Trx</p>
-                                            <p>Pending: 0</p>
-                                            <p>Error: 0</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">Mtl.Trx</p>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">Pending: </p>
+                                                        <Badge pill color="primary">1000</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Error: </p>
+                                                        <Badge pill color="danger">1000</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>Mtl.Trx</p>
-                                            <p>Pending: 0</p>
-                                            <p>Error: 0</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">Mtl.Trx</p>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">Pending: </p>
+                                                        <Badge pill color="primary">1000</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Error: </p>
+                                                        <Badge pill color="danger">1000</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>Mtl.Trx</p>
-                                            <p>Pending: 0</p>
-                                            <p>Error: 0</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">Mtl.Trx</p>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">Pending: </p>
+                                                        <Badge pill color="primary">1000</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Error: </p>
+                                                        <Badge pill color="danger">1000</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>Mtl.Trx</p>
-                                            <p>Pending: 0</p>
-                                            <p>Error: 0</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">Mtl.Trx</p>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">Pending: </p>
+                                                        <Badge pill color="primary">1000</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Error: </p>
+                                                        <Badge pill color="danger">1000</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>Mtl.Trx</p>
-                                            <p>Pending: 0</p>
-                                            <p>Error: 0</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">Mtl.Trx</p>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">Pending: </p>
+                                                        <Badge pill color="primary">1000</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Error: </p>
+                                                        <Badge pill color="danger">1000</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>Mtl.Trx</p>
-                                            <p>Pending: 0</p>
-                                            <p>Error: 0</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">Mtl.Trx</p>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">Pending: </p>
+                                                        <Badge pill color="primary">1000</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Error: </p>
+                                                        <Badge pill color="danger">1000</Badge>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                     </ListGroup>
                                 </CardBlock>
@@ -91,27 +182,38 @@ class WipClose extends Component {
                         </Col>
                         <Col sm={6}>
                             <Card>
-                                <CardTitle>Summary <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
-                                <Row>
-                                    <Button color="success">TO WIP_READY 9</Button>
-                                    <p>TOTAL AVAILABLE: 4216</p>
-                                    <p>TOTAL READY: 4344</p>
-                                </Row>
-                                <Row>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">Summary</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                </div>
+                                <div className="d-flex justify-content-between align-items-center p-2">
+                                    <Button color="primary">TO WIP_READY 9</Button>
+                                    <div className="text-right">
+                                        <p>TOTAL AVAILABLE: 4216</p>
+                                        <p className="mb-0">TOTAL READY: 4344</p>
+                                    </div>
+                                </div>
+                                <Row className="p-3">
                                     <Col sm={6}>
                                         <p>Semi Product</p>
                                         <ListGroup>
                                             <ListGroupItem>
-                                                <p>Steel Making</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Steel Making</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Rebar</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Rebar</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Section</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Section</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                         </ListGroup>
                                     </Col>
@@ -119,16 +221,22 @@ class WipClose extends Component {
                                         <p>Finish Good</p>
                                         <ListGroup>
                                             <ListGroupItem>
-                                                <p>Steel Making</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Steel Making</p>
+                                                     <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Rebar</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Rebar</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Section</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Section</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                         </ListGroup>
                                     </Col>
@@ -136,12 +244,16 @@ class WipClose extends Component {
                                         <p>Rework</p>
                                         <ListGroup>
                                             <ListGroupItem>
-                                                <p>Rebar</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Rebar</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Section</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Section</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                         </ListGroup>
                                     </Col>
@@ -149,16 +261,22 @@ class WipClose extends Component {
                                         <p>Shipping</p>
                                         <ListGroup>
                                             <ListGroupItem>
-                                                <p>Steel Making</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Steel Making</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Rebar</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Rebar</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                <p>Section</p>
-                                                <Badge>9</Badge>
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <p className="mb-0">Section</p>
+                                                    <Button color="primary" size="sm">999</Button>
+                                                </div>
                                             </ListGroupItem>
                                         </ListGroup>
                                     </Col>
@@ -169,36 +287,79 @@ class WipClose extends Component {
                     <Row>
                         <Col sm={3}>
                             <Card>
-                                <CardTitle>Negative Raw Material <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">Negative Raw Material</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button></div>
                                 <CardBlock>
                                     <ListGroup>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>Description</p>
-                                            <p>On Hand 34,432,296</p>
-                                            <p>Pending 34,432,296</p>
-                                            <p>Balance 34,432,296</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0">AA810V00</p>
+                                                    <p className="mb-0">Description</p>
+                                                </div>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">On Hand: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="mb-0">Pending: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Balance: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>Description</p>
-                                            <p>On Hand 34,432,296</p>
-                                            <p>Pending 34,432,296</p>
-                                            <p>Balance 34,432,296</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0">AA810V00</p>
+                                                    <p className="mb-0">Description</p>
+                                                </div>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">On Hand: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="mb-0">Pending: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Balance: </p>
+                                                        <Badge pill color="danger">34,432,296</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>Description</p>
-                                            <p>On Hand 34,432,296</p>
-                                            <p>Pending 34,432,296</p>
-                                            <p>Balance 34,432,296</p>
-                                        </ListGroupItem>
-                                        <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>Description</p>
-                                            <p>On Hand 34,432,296</p>
-                                            <p>Pending 34,432,296</p>
-                                            <p>Balance 34,432,296</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p className="mb-0">AA810V00</p>
+                                                    <p className="mb-0">Description</p>
+                                                </div>
+                                                <div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="pb-1 mb-0 mr-2 ">On Hand: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center oit-pending">
+                                                        <p className="mb-0">Pending: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+                                                    <div className="d-flex justify-content-between align-items-center">
+                                                        <p className="mb-0">Balance: </p>
+                                                        <Badge pill color="primary">34,432,296</Badge>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </ListGroupItem>
                                     </ListGroup>
                                 </CardBlock>
@@ -206,16 +367,28 @@ class WipClose extends Component {
                         </Col>
                         <Col sm={3}>
                             <Card>
-                                <CardTitle>Trx Code 66 <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">Trx Code 66</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button></div>
                                 <CardBlock>
                                     <ListGroup>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>123,456</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">AA810V00</p>
+                                                <p className="mb-0">123,456</p>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>123,456</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">AA810V00</p>
+                                                <p className="mb-0">123,456</p>
+                                            </div>
+                                        </ListGroupItem>
+                                        <ListGroupItem>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">AA810V00</p>
+                                                <p className="mb-0">123,456</p>
+                                            </div>
                                         </ListGroupItem>
                                     </ListGroup>
                                 </CardBlock>
@@ -223,24 +396,28 @@ class WipClose extends Component {
                         </Col>
                         <Col sm={3}>
                             <Card>
-                                <CardTitle>Backflush <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">Backflush</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button></div>
                                 <CardBlock>
                                     <ListGroup>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>123,456</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">AA810V00</p>
+                                                <p className="mb-0">123,456</p>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>123,456</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">AA810V00</p>
+                                                <p className="mb-0">123,456</p>
+                                            </div>
                                         </ListGroupItem>
                                         <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>123,456</p>
-                                        </ListGroupItem>
-                                        <ListGroupItem>
-                                            <p>AA810V00</p>
-                                            <p>123,456</p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">AA810V00</p>
+                                                <p className="mb-0">123,456</p>
+                                            </div>
                                         </ListGroupItem>
                                     </ListGroup>
                                 </CardBlock>
@@ -248,8 +425,52 @@ class WipClose extends Component {
                         </Col>
                         <Col sm={3}>
                             <Card>
-                                <CardTitle>History <Button color="link"><i className="icon-refresh"></i></Button></CardTitle>
+                                <div className="d-flex justify-content-between">
+                                    <div className="p-2 typo-card-title text-uppercase">History</div>
+                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                </div>
+                                <CardBlock>
+                                    <ListGroup>
+                                        <ListGroupItem>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">WIP_READY</p>
+                                                <div className="text-right">
+                                                    <p className="pb-1 mb-0 oit-pending">1000</p>
+                                                    <p className="pb-1 mb-0 font-italic">2002-05-30 09:00</p>
+                                                </div>
+                                            </div>
+                                        </ListGroupItem>
+                                        <ListGroupItem>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">WIP_READY</p>
+                                                <div className="text-right">
+                                                    <p className="pb-1 mb-0 oit-pending">1000</p>
+                                                    <p className="pb-1 mb-0 font-italic">2002-05-30 09:00</p>
+                                                </div>
+                                            </div>
+                                        </ListGroupItem>
+                                        <ListGroupItem>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">WIP_READY</p>
+                                                <div className="text-right">
+                                                    <p className="pb-1 mb-0 oit-pending">1000</p>
+                                                    <p className="pb-1 mb-0 font-italic">2002-05-30 09:00</p>
+                                                </div>
+                                            </div>
+                                        </ListGroupItem>
+                                        <ListGroupItem>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <p className="mb-0">WIP_READY</p>
+                                                <div className="text-right">
+                                                    <p className="pb-1 mb-0 oit-pending">1000</p>
+                                                    <p className="pb-1 mb-0 font-italic">2002-05-30 09:00</p>
+                                                </div>
+                                            </div>
+                                        </ListGroupItem>
+                                    </ListGroup>
+                                </CardBlock>
                             </Card>
+
                         </Col>
                     </Row>
                 </Container>

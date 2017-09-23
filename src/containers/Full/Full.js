@@ -28,7 +28,7 @@ class Full extends Component {
                                 <Route path="/crosscheck" name="CrossCheck" component={CrossCheck} />
                                 <Route path="/productionresult" name="ProductionResult" component={ProductionResult} />
                                 <Route path="/kpi" name="KPI" component={KPI} />
-                                <Redirect exact from="/" to="/wipclose"/>
+                                <Redirect from="/" to="/wipclose"/>
                             </Switch>
                         </Container>
                     </main>
