@@ -13,9 +13,9 @@ import '../scss/style.scss'
 
 // Containers
 import Full from './containers/Full/'
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 ReactDOM.render((
-    <HashRouter history={history}>
+    <HashRouter>
         <Switch>
             <Route path="/" name="Home" component={Full}/>
         </Switch>

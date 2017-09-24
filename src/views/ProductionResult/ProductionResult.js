@@ -14,6 +14,7 @@ import {
     ListGroupItem
 
 } from 'reactstrap';
+import ProductionResultGroup from './ProductionResultGroup';
 class ProductionResult extends Component {
 
     render() {
@@ -37,148 +38,16 @@ class ProductionResult extends Component {
                                             <CardBlock>
                                                 <Row>
                                                     <Col sm={3}>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Prod.Qty
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Prod.Qty"/>
                                                     </Col>
                                                     <Col sm={3}>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Scrap
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Scrap"/>
                                                     </Col>
                                                     <Col sm={3}>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Ferro
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Ferro"/>
                                                     </Col>
                                                     <Col sm={3}>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Ore
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Ore"/>
                                                     </Col>
                                                 </Row>
                                             </CardBlock>
@@ -193,79 +62,11 @@ class ProductionResult extends Component {
                                             <CardBlock>
                                                 <Row>
                                                     <Col sm={6}>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Receipt
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Receipt"/>
                                                     </Col>
                                                     <Col sm={6}>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Return
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Return"/>
                                                     </Col>
-
-
                                                 </Row>
                                             </CardBlock>
                                         </Card>
@@ -279,40 +80,7 @@ class ProductionResult extends Component {
                                             <CardBlock>
                                                 <Row>
                                                     <Col>
-                                                        <Card>
-                                                            <div className="d-flex justify-content-between">
-                                                                <div className="p-2 typo-card-title text-uppercase">
-                                                                    Receipt
-                                                                </div>
-                                                                <Button color="link"><i
-                                                                    className="icon-refresh"></i></Button>
-                                                            </div>
-                                                            <CardBlock>
-                                                                <ListGroup>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">ERP</p>
-                                                                            <p className="mb-0">62044020</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0">MES</p>
-                                                                            <p className="mb-0">62044000</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                    <ListGroupItem>
-                                                                        <div
-                                                                            className="d-flex justify-content-between align-items-center">
-                                                                            <p className="mb-0"></p>
-                                                                            <p className="mb-0">20</p>
-                                                                        </div>
-                                                                    </ListGroupItem>
-                                                                </ListGroup>
-                                                            </CardBlock>
-                                                        </Card>
+                                                        <ProductionResultGroup name="Receipt"/>
                                                     </Col>
                                                 </Row>
                                             </CardBlock>
@@ -350,79 +118,11 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Prod.Qty
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Prod.Qty"/>
                                                                         </Col>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Input
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Input"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -443,79 +143,11 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Receipt
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Receipt"/>
                                                                         </Col>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Return
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Return"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -536,43 +168,8 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Issue
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Issue"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -602,79 +199,11 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Prod.Qty
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Prod.Qty"/>
                                                                         </Col>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Input
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Input"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -685,9 +214,7 @@ class ProductionResult extends Component {
                                         </Col>
                                     </Row>
                                 </CardBlock>
-
                             </Card>
-
                         </Col>
                         <Col sm={6}>
                             <Card>
@@ -709,8 +236,7 @@ class ProductionResult extends Component {
                                                             <Card>
                                                                 <div className="d-flex justify-content-between">
                                                                     <div className="p-2 typo-card-title text-uppercase">
-                                                                        Semi
-                                                                        Product
+                                                                        Semi Product
                                                                     </div>
                                                                     <Button color="link"><i
                                                                         className="icon-refresh"></i></Button>
@@ -718,79 +244,11 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Prod.Qty
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Prod.Qty"/>
                                                                         </Col>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Input
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Input"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -811,79 +269,11 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Receipt
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Receipt"/>
                                                                         </Col>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Return
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Return"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -904,43 +294,8 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Issue
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Issue"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>
@@ -970,79 +325,11 @@ class ProductionResult extends Component {
                                                                 <CardBlock>
                                                                     <Row>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Prod.Qty
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Prod.Qty"/>
                                                                         </Col>
                                                                         <Col sm={6}>
-                                                                            <Card>
-                                                                                <div className="d-flex justify-content-between">
-                                                                                    <div className="p-2 typo-card-title text-uppercase">
-                                                                                        Input
-                                                                                    </div>
-                                                                                    <Button color="link"><i
-                                                                                        className="icon-refresh"></i></Button>
-                                                                                </div>
-                                                                                <CardBlock>
-                                                                                    <ListGroup>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">ERP</p>
-                                                                                                <p className="mb-0">62044020</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0">MES</p>
-                                                                                                <p className="mb-0">62044000</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                        <ListGroupItem>
-                                                                                            <div
-                                                                                                className="d-flex justify-content-between align-items-center">
-                                                                                                <p className="mb-0"></p>
-                                                                                                <p className="mb-0">20</p>
-                                                                                            </div>
-                                                                                        </ListGroupItem>
-                                                                                    </ListGroup>
-                                                                                </CardBlock>
-                                                                            </Card>
+                                                                            <ProductionResultGroup name="Input"/>
                                                                         </Col>
-
-
                                                                     </Row>
                                                                 </CardBlock>
                                                             </Card>

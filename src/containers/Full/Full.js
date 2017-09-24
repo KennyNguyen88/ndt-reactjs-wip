@@ -22,7 +22,7 @@ class Full extends Component {
                     <Sidebar {...this.props}/>
                     <main className="main">
                         <Breadcrumb/>
-                        <Container fluid>
+                        <Container fluid className="p-0">
                             <Switch>
                                 <Route path="/wipclose" name="WipClose" component={WipClose}/>
                                 <Route path="/crosscheck" name="CrossCheck" component={CrossCheck} />

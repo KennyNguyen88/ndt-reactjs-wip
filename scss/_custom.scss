@@ -1,8 +1,29 @@
 // Here you can add other styles
-
+@import "../node_modules/react-switch-button/dist/react-switch-button.min.css";
 .typo-card-title{
-
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.typo-group-title{
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 .oit-pending{
   border-bottom: 1px black solid;
+}
+.card-block{
+  padding: 1rem;
+}
+.list-group-item{
+  padding: 0.5rem 0.75rem;
+}
+
+.different{
+  background-color: firebrick;
+  color: whitesmoke;
+}
+
+.rsbc-switch-button{
+  display: block;
+  text-align: center;
 }
