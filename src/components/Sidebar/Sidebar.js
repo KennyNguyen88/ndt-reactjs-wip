@@ -3,16 +3,11 @@ import {NavLink} from 'react-router-dom';
 import {
     Badge,
     Nav,
-    NavItem,
-    Input,
-    Button,
-    Form,
-    FormGroup,
-    Label
+    NavItem
 } from 'reactstrap';
 import classNames from 'classnames';
 import nav from './_nav'
-import SwitchButton from 'react-switch-button';
+
 class Sidebar extends Component {
 
     handleClick(e) {
@@ -58,7 +53,7 @@ class Sidebar extends Component {
         };
 
         // nav list divider
-        const divider = (divider, key) => (<li key={key} className="divider"></li>);
+        const divider = (divider, key) => (<li key={key} className="divider"/>);
 
         // nav item with nav link
         const navItem = (item, key) => {
@@ -66,7 +61,7 @@ class Sidebar extends Component {
             return (
                 <NavItem key={key}>
                     <NavLink to={item.url} className={ classes } activeClassName="active">
-                        <i className={item.icon}></i>{item.name}{badge(item.badge)}
+                        <i className={item.icon}/>{item.name}{badge(item.badge)}
                     </NavLink>
                 </NavItem>
             )
@@ -76,8 +71,7 @@ class Sidebar extends Component {
         const navDropdown = (item, key) => {
             return (
                 <li key={key} className={activeRoute(item.url, props)}>
-                    <a className="nav-link nav-dropdown-toggle" href="#" onClick={handleClick.bind(this)}><i
-                        className={item.icon}></i> {item.name}</a>
+                    <a className="nav-link nav-dropdown-toggle" href="#" onClick={handleClick.bind(this)}><i className={item.icon}/> {item.name}</a>
                     <ul className="nav-dropdown-items">
                         {navList(item.children)}
                     </ul>
@@ -103,23 +97,7 @@ class Sidebar extends Component {
                     <Nav>
                         {navList(nav.items)}
                     </Nav>
-                    <Form>
-                        <FormGroup className="mr-2">
-                            <Label for="inputMonth" className="mr-1">Month </Label>
-                            <Input type="text" name="inputMonth" id="inputMonth" />
-                        </FormGroup>
-                        <FormGroup className="mr-2">
-                            <Label for="inputFromDate" className="mr-1">From Date </Label>
-                            <Input type="date" name="inputFromDate" id="inputFromDate" />
-                        </FormGroup>
-                        <FormGroup className="mr-2">
-                            <Label for="inputToDate" className="mr-1">To Date </Label>
-                            <Input type="date" name="inputToDate" id="inputToDate" />
-                        </FormGroup>
-                        <Button color="primary" className="mb-3" block>SEARCH</Button>
-                        <SwitchButton name="switch-refresh" label="Monitor"/>
 
-                    </Form>
                 </nav>
 
 

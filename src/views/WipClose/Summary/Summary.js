@@ -11,83 +11,23 @@ import CardTitle from '../../CardTitle';
 export default class Summary extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            to_wip_ready: 9,
-            total_available: 4216,
-            total_ready: 4344,
-            group_semi_product: {
-                name: 'Semi Product',
-                data: [
-                    {
-                        name: 'Steel Making',
-                        total: 999
-                    },
-                    {
-                        name: 'Rebar',
-                        total: 999
-                    },
-                    {
-                        name: 'Section',
-                        total: 999
-                    }
-                ]
-            },
-            group_finish_good: {
-                name: 'Finish Good',
-                data: [
-                    {
-                        name: 'Steel Making',
-                        total: 999
-                    },
-                    {
-                        name: 'Rebar',
-                        total: 999
-                    },
-                    {
-                        name: 'Section',
-                        total: 999
-                    }
-                ]
-            },
-            group_rework: {
-                name: 'Rework',
-                data: [
-                    {
-                        name: 'Rebar',
-                        total: 999
-                    },
-                    {
-                        name: 'Section',
-                        total: 999
-                    }
-                ]
-            },
-            group_shipping: {
-                name: 'Shipping',
-                data: [
-                    {
-                        name: 'Steel Making',
-                        total: 999
-                    },
-                    {
-                        name: 'Rebar',
-                        total: 999
-                    },
-                    {
-                        name: 'Section',
-                        total: 999
-                    }
-                ]
-            }
-        }
+        this.state = this.props.data;
     }
+
+    handleRefresh = () => {
+        console.log('handleRefresh');
+    };
+
+    handleToWipReady = () => {
+        console.log('handleToWipReady');
+    };
 
     render() {
         return (
             <Card>
-                <CardTitle name={this.props.name}/>
+                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
                 <div className="d-flex justify-content-between align-items-center p-2">
-                    <Button color="primary">TO WIP_READY {this.state.to_wip_ready}</Button>
+                    <Button color="primary" onClick={this.handleToWipReady}>TO WIP_READY {this.state.to_wip_ready}</Button>
                     <div className="text-right">
                         <p>TOTAL AVAILABLE: {this.state.total_available}</p>
                         <p className="mb-0">TOTAL READY: {this.state.total_ready}</p>

@@ -13,7 +13,10 @@ const IfStatusItem = (props) =>  {
                     <p className="mb-0 text-left">{props.name}</p>
                     <p className="mb-0 font-italic text-left">{props.desc}</p>
                 </div>
-                <Button color="primary" size="sm">{props.total}</Button>
+                <Button
+                    color="primary"
+                    size="sm"
+                    onClick={props.handleClick}>{props.total}</Button>
             </div>
         </ListGroupItem>
     )
@@ -21,6 +24,7 @@ const IfStatusItem = (props) =>  {
 IfStatusItem.propTypes = {
     name: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
-    total: PropTypes.number.isRequired
+    total: PropTypes.number.isRequired,
+    handleClick: PropTypes.func.isRequired
 };
 export default IfStatusItem;

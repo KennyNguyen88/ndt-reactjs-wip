@@ -11,7 +11,13 @@ const IfStatusList = (props) => {
         <ListGroup>
             {
                 props.data.map((item, index) => {
-                    return <IfStatusItem key={index} name={item.name} desc={item.desc} total={item.total}/>
+                    return <IfStatusItem
+                        key={index}
+                        name={item.name}
+                        desc={item.desc}
+                        total={item.total}
+                        handleClick={() => props.handleItemClickAt(index)}
+                    />
                 })
             }
         </ListGroup>
@@ -19,7 +25,8 @@ const IfStatusList = (props) => {
 };
 
 IfStatusList.propTypes = {
-  data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    handleItemClickAt: PropTypes.func.isRequired
 };
 
 export default IfStatusList;

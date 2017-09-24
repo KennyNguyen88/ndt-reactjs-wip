@@ -13,44 +13,19 @@ export default class Oit extends Component {
     constructor(props){
         super(props);
         this.state = {
-            data: [
-                {
-                    name: 'Mtl.Trx',
-                    pending: 100,
-                    error: 0
-                },
-                {
-                    name: 'Mtl.Lot.Trx',
-                    pending: 0,
-                    error: 0
-                },
-                {
-                    name: 'Wip.Job',
-                    pending: 100,
-                    error: 0
-                },
-                {
-                    name: 'Mov.Trx',
-                    pending: 0,
-                    error: 0
-                },
-                {
-                    name: 'Resources',
-                    pending: 0,
-                    error: 0
-                },
-                {
-                    name: 'Mtl.Temp',
-                    pending: 0,
-                    error: 0
-                }
-            ]
+            data: props.data
         }
     }
+
+    handleRefresh = () => {
+        console.log('handleRefresh');
+
+    };
+
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name}/>
+                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
                 <CardBlock>
                     <OitList data={this.state.data} />
                 </CardBlock>

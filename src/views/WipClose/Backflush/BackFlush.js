@@ -12,26 +12,19 @@ export default class BackFlush extends Component {
     constructor(props){
         super(props);
         this.state = {
-            data: [
-                {
-                    name: 'AA810V00',
-                    total: 34432296
-                },
-                {
-                    name: 'AA810V00',
-                    total: 34432296
-                },
-                {
-                    name: 'AA810V00',
-                    total: 34432296
-                }
-            ]
+            data: props.data
         }
     }
+
+    handleRefresh = () => {
+        console.log('handleRefresh');
+
+    };
+
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name}/>
+                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
                 <CardBlock>
                     <BackFlushList data={this.state.data} />
                 </CardBlock>

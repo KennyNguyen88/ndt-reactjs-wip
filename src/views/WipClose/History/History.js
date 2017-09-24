@@ -12,29 +12,19 @@ export default class History extends Component {
     constructor(props){
         super(props);
         this.state = {
-            data: [
-                {
-                    name: 'WIP_READY',
-                    total: 34432296,
-                    happenTime: '2017-09-23 09:00'
-                },
-                {
-                    name: 'WIP_READY',
-                    total: 34432296,
-                    happenTime: '2017-09-23 09:00'
-                },
-                {
-                    name: 'WIP_READY',
-                    total: 34432296,
-                    happenTime: '2017-09-23 09:00'
-                }
-            ]
+            data: props.data
         }
     }
+
+    handleRefresh = () => {
+        console.log('handleRefresh');
+
+    };
+
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name}/>
+                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
                 <CardBlock>
                     <HistoryList data={this.state.data} />
                 </CardBlock>

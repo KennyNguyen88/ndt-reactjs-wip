@@ -13,41 +13,25 @@ export default class IFStatus extends  Component{
     constructor(props){
         super(props);
         this.state = {
-            data: [
-                {
-                    name: 'NEW',
-                    desc: 'New',
-                    total: 10
-                },
-                {
-                    name: 'WIP_READY',
-                    desc: 'Wip Ready',
-                    total: 100
-                },
-                {
-                    name: 'PSV_WIP_C620',
-                    desc: 'Shortage Component',
-                    total: 1000
-                },
-                {
-                    name: '000',
-                    desc: 'Complete',
-                    total: 10000
-                },
-                {
-                    name: 'WIP_CANCEL',
-                    desc: 'Wip Cancel',
-                    total: 10000
-                }
-            ]
+            data: props.data
         }
     }
+
+    handleRefresh = () => {
+      console.log('handleRefresh');
+
+    };
+
+    handleItemClickAt = index => {
+        console.log('handleItemClickAt', index);
+    };
+
     render(){
         return (
             <Card>
-                <CardTitle name={this.props.name}/>
+                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
                 <CardBlock>
-                    <IfStatusList data={this.state.data} />
+                    <IfStatusList data={this.state.data} handleItemClickAt={this.handleItemClickAt}/>
                 </CardBlock>
             </Card>
         );

@@ -40,7 +40,7 @@ module.exports = (env = {}) => {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
-              presets: ['react', 'env']
+              presets: ['es2015', 'react', 'env' ,'stage-0']
             }
           }
         },

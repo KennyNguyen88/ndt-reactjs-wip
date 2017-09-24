@@ -8,11 +8,12 @@ const CardTitle = (props) => {
   return (
       <div className="d-flex justify-content-between">
           <div className="p-2 typo-card-title text-uppercase">{props.name}</div>
-          <Button color="link"><i className="icon-refresh"></i></Button>
+          <Button color="link" onClick={props.handleClick}><i className="icon-refresh"></i></Button>
       </div>
   )
 };
 CardTitle.propTypes = {
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    handleClick: PropTypes.func.isRequired
 };
 export default CardTitle;
