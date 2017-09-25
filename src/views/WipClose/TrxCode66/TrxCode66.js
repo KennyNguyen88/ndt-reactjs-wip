@@ -16,14 +16,21 @@ export default class TrxCode66 extends Component {
         }
     }
 
-    handleRefresh = () => {
-        console.log('handleRefresh');
-    };
+    //Life cycles
+
+    componentWillReceiveProps(nextProps){
+        this.state = {
+            data: nextProps.data
+        };
+        this.setState(prevState => this.state)
+    }
+
+    //Helper
 
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
+                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <TrxCode66List data={this.state.data} />
                 </CardBlock>

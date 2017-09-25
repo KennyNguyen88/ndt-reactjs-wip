@@ -9,27 +9,34 @@ import {Card, CardBlock, Button} from 'reactstrap';
 import IfStatusList from './IfStatusList';
 import CardTitle from '../../CardTitle';
 
-export default class IFStatus extends  Component{
-    constructor(props){
+export default class IFStatus extends Component {
+    constructor(props) {
         super(props);
         this.state = {
             data: props.data
         }
     }
+    //Life cycles
 
-    handleRefresh = () => {
-      console.log('handleRefresh');
+    componentWillReceiveProps(nextProps){
+        this.state = {
+            data: nextProps.data
+        };
+        this.setState(prevState => this.state)
+    }
 
-    };
+    //Helper
+
 
     handleItemClickAt = index => {
         console.log('handleItemClickAt', index);
+        //open modal show detail
     };
 
-    render(){
+    render() {
         return (
             <Card>
-                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
+                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <IfStatusList data={this.state.data} handleItemClickAt={this.handleItemClickAt}/>
                 </CardBlock>
@@ -39,7 +46,7 @@ export default class IFStatus extends  Component{
 }
 
 IFStatus.propTypes = {
-  name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired
 };
 
 

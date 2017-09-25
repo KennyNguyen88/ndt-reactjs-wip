@@ -14,9 +14,14 @@ export default class Summary extends Component {
         this.state = this.props.data;
     }
 
-    handleRefresh = () => {
-        console.log('handleRefresh');
-    };
+    //Life cycles
+
+    componentWillReceiveProps(nextProps){
+        this.state = nextProps.data;
+        this.setState(prevState => this.state)
+    }
+
+    //Helper
 
     handleToWipReady = () => {
         console.log('handleToWipReady');
@@ -25,7 +30,7 @@ export default class Summary extends Component {
     render() {
         return (
             <Card>
-                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
+                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <div className="d-flex justify-content-between align-items-center p-2">
                     <Button color="primary" onClick={this.handleToWipReady}>TO WIP_READY {this.state.to_wip_ready}</Button>
                     <div className="text-right">

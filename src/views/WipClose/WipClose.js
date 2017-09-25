@@ -13,6 +13,7 @@ import {
     CardBlock
 } from 'reactstrap';
 import SwitchButton from 'react-switch-button';
+import Axios from 'axios';
 //Custom
 import IfStatus from './IFStatus/IFStatus';
 import Oit from './Oit/Oit';
@@ -22,21 +23,28 @@ import TrxCode66 from './TrxCode66/TrxCode66';
 import BackFlush from './Backflush/BackFlush';
 import History from './History/History';
 import data from './_data';
+import commonURL from './_url';
+import initData from './_initData';
 
 class WipClose extends Component {
     //Lifecycle
     constructor(props) {
         super(props);
-        this.state = data;
-        //this.state = {};
+        console.log('WipClose constructor');
+        this.state = initData;
     }
 
     componentDidMount() {
-        // set default data for fromdata todate : 0106 ~ 0205 --> 01, from 0101 to 0131
+        console.log('componentDidMount');
+        // set default data for fromdate todate : 0106 ~ 0205 --> 01, from 0101 to 0131
         this.setDefaultControl();
         // get data with default setting
         this.doSearch();
+        this.interval = setInterval(this.onRefresh, 5000);
+    }
 
+    componentWillMount() {
+        clearInterval(this.interval);
     }
 
     //Event
@@ -51,21 +59,34 @@ class WipClose extends Component {
 
     handleMonitor = (e) => {
         console.log('handleMonitor', e.target.checked);
+        if (e.target.checked) {
+            // this.interval = setInterval(this.doSearch(),500); //5s
+            this.setState({
+                running: true
+            })
+        }
+        else {
+            // clearInterval(this.interval);
+            this.setState({
+                running: false
+            })
+        }
     };
 
     handleFromDateChange = (e) => {
         console.log('handleFromDateChange', e.target.value);
         this.setState({
             Control: {
-                fromDate: e.target.value
+                fromDate: e.target.value,
+                toDate: this.state.Control.toDate
             }
         })
     };
-
     handleToDateChange = (e) => {
         console.log('handleToDateChange', e.target.value);
         this.setState({
             Control: {
+                fromDate: this.state.Control.fromDate,
                 toDate: e.target.value
             }
         })
@@ -112,10 +133,102 @@ class WipClose extends Component {
         ));
     };
     doSearch = () => {
-        console.log('doSearch');
-        // console.log(this.state.Control);
-        // console.log('search', this.state.Control.fromDate);
-        // console.log('search', this.state.Control.toDate);
+        this.searchIfStatus();
+        this.searchOit();
+        this.searchSummary();
+        this.searchNegativeRawMaterial();
+        this.searchTrxCode66();
+        this.searchBackFlush();
+        this.searchHistory();
+    };
+    searchIfStatus = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchIfStatus',fromDate,toDate);
+        Axios.get(commonURL.IfStatus)
+            .then((res) => {
+                this.setState({
+                    IfStatus: res.data.IfStatus
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    searchOit = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchOit', fromDate, toDate);
+        Axios.get(commonURL.Oit)
+            .then((res) => {
+                this.setState({
+                    Oit: res.data.Oit
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    searchSummary = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchSummary', fromDate, toDate);
+        Axios.get(commonURL.Summary)
+            .then((res) => {
+                this.setState({
+                    Summary: res.data.Summary
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    searchNegativeRawMaterial = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchNegativeRawMaterial', fromDate, toDate);
+        Axios.get(commonURL.Negative)
+            .then((res) => {
+                this.setState({
+                    NegativeRawMaterial: res.data.NegativeRawMaterial
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    searchTrxCode66 = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchTrxCode66', fromDate, toDate);
+        Axios.get(commonURL.TrxCode66)
+            .then((res) => {
+                this.setState({
+                    TrxCode66: res.data.TrxCode66
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    searchBackFlush = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchBackFlush', fromDate, toDate);
+        Axios.get(commonURL.BackFlush)
+            .then((res) => {
+                this.setState({
+                    BackFlush: res.data.BackFlush
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    searchHistory = () => {
+        let fromDate = this.state.Control.fromDate;
+        let toDate = this.state.Control.toDate;
+        console.log('searchHistory', fromDate, toDate);
+        Axios.get(commonURL.History)
+            .then((res) => {
+                this.setState({
+                    History: res.data.History
+                })
+            })
+            .catch((error) => console.log(error));
+    };
+    onRefresh = () => {
+        if (this.state.running) {
+            this.doSearch();
+        }
     };
 
 
@@ -151,28 +264,52 @@ class WipClose extends Component {
                     </Row>
                     <Row>
                         <Col lg={3} sm={12}>
-                            <IfStatus name={this.state.IfStatus.name} data={this.state.IfStatus.data}/>
+                            <IfStatus
+                                name={this.state.IfStatus.name}
+                                data={this.state.IfStatus.data}
+                                handleRefresh={this.searchIfStatus}/>
                         </Col>
                         <Col lg={3} sm={12}>
-                            <Oit name={this.state.Oit.name} data={this.state.Oit.data}/>
+                            <Oit
+                                name={this.state.Oit.name}
+                                data={this.state.Oit.data}
+                                handleRefresh={this.searchOit}/>
                         </Col>
                         <Col lg={6} sm={12}>
-                            <Summary name={this.state.Summary.name} data={this.state.Summary.data}/>
+                            <Summary
+                                name={this.state.Summary.name}
+                                data={this.state.Summary.data}
+                                handleRefresh={this.searchSummary}/>
                         </Col>
                     </Row>
                     <Row>
                         <Col lg={3} sm={12}>
-                            <NegativeRawMaterial name={this.state.NegativeRawMaterial.name}
-                                                 data={this.state.NegativeRawMaterial.data}/>
+                            <NegativeRawMaterial
+                                name={this.state.NegativeRawMaterial.name}
+                                data={this.state.NegativeRawMaterial.data}
+                                handleRefresh={this.searchNegativeRawMaterial}
+                            />
                         </Col>
                         <Col lg={3} sm={12}>
-                            <TrxCode66 name={this.state.TrxCode66.name} data={this.state.TrxCode66.data}/>
+                            <TrxCode66
+                                name={this.state.TrxCode66.name}
+                                data={this.state.TrxCode66.data}
+                                handleRefresh={this.searchTrxCode66}
+                            />
                         </Col>
                         <Col lg={3} sm={12}>
-                            <BackFlush name={this.state.BackFlush.name} data={this.state.BackFlush.data}/>
+                            <BackFlush
+                                name={this.state.BackFlush.name}
+                                data={this.state.BackFlush.data}
+                                handleRefresh={this.searchBackFlush}
+                            />
                         </Col>
                         <Col lg={3} sm={12}>
-                            <History name={this.state.History.name} data={this.state.History.data}/>
+                            <History
+                                name={this.state.History.name}
+                                data={this.state.History.data}
+                                handleRefresh={this.searchHistory}
+                            />
                         </Col>
                     </Row>
                 </Container>

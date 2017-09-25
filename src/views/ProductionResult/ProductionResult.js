@@ -26,14 +26,14 @@ class ProductionResult extends Component {
                             <Card>
                                 <div className="d-flex justify-content-between">
                                     <div className="p-2 typo-card-title text-uppercase">Steel Making</div>
-                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                    <Button color="link"><i className="icon-refresh"/></Button>
                                 </div>
                                 <Row className="p-2">
                                     <Col sm={6}>
                                         <Card>
                                             <div className="d-flex justify-content-between">
                                                 <div className="p-2 typo-card-title text-uppercase">Semi Product</div>
-                                                <Button color="link"><i className="icon-refresh"></i></Button>
+                                                <Button color="link"><i className="icon-refresh"/></Button>
                                             </div>
                                             <CardBlock>
                                                 <Row>
@@ -57,7 +57,7 @@ class ProductionResult extends Component {
                                         <Card>
                                             <div className="d-flex justify-content-between">
                                                 <div className="p-2 typo-card-title text-uppercase">Finish Good</div>
-                                                <Button color="link"><i className="icon-refresh"></i></Button>
+                                                <Button color="link"><i className="icon-refresh"/></Button>
                                             </div>
                                             <CardBlock>
                                                 <Row>
@@ -75,7 +75,7 @@ class ProductionResult extends Component {
                                         <Card>
                                             <div className="d-flex justify-content-between">
                                                 <div className="p-2 typo-card-title text-uppercase">Shipping</div>
-                                                <Button color="link"><i className="icon-refresh"></i></Button>
+                                                <Button color="link"><i className="icon-refresh"/></Button>
                                             </div>
                                             <CardBlock>
                                                 <Row>
@@ -93,7 +93,7 @@ class ProductionResult extends Component {
                             <Card>
                                 <div className="d-flex justify-content-between">
                                     <div className="p-2 typo-card-title text-uppercase">Deformed Bar</div>
-                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                    <Button color="link"><i className="icon-refresh"/></Button>
                                 </div>
                                 <CardBlock>
                                     <Row>
@@ -101,7 +101,7 @@ class ProductionResult extends Component {
                                             <Card>
                                                 <div className="d-flex justify-content-between">
                                                     <div className="p-2 typo-card-title text-uppercase">Normal</div>
-                                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                                    <Button color="link"><i className="icon-refresh"/></Button>
                                                 </div>
                                                 <CardBlock>
                                                     <Row>
@@ -113,7 +113,7 @@ class ProductionResult extends Component {
                                                                         Product
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -138,7 +138,7 @@ class ProductionResult extends Component {
                                                                         Finish Good
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -163,7 +163,7 @@ class ProductionResult extends Component {
                                                                         Shipping
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -182,7 +182,7 @@ class ProductionResult extends Component {
                                             <Card>
                                                 <div className="d-flex justify-content-between">
                                                     <div className="p-2 typo-card-title text-uppercase">Rework</div>
-                                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                                    <Button color="link"><i className="icon-refresh"/></Button>
                                                 </div>
                                                 <CardBlock>
                                                     <Row>
@@ -194,7 +194,7 @@ class ProductionResult extends Component {
                                                                         Product
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -220,7 +220,7 @@ class ProductionResult extends Component {
                             <Card>
                                 <div className="d-flex justify-content-between">
                                     <div className="p-2 typo-card-title text-uppercase">Section</div>
-                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                    <Button color="link"><i className="icon-refresh"/></Button>
                                 </div>
                                 <CardBlock>
                                     <Row>
@@ -228,7 +228,7 @@ class ProductionResult extends Component {
                                             <Card>
                                                 <div className="d-flex justify-content-between">
                                                     <div className="p-2 typo-card-title text-uppercase">Normal</div>
-                                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                                    <Button color="link"><i className="icon-refresh"/></Button>
                                                 </div>
                                                 <CardBlock>
                                                     <Row>
@@ -239,7 +239,7 @@ class ProductionResult extends Component {
                                                                         Semi Product
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -264,7 +264,7 @@ class ProductionResult extends Component {
                                                                         Finish Good
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -289,7 +289,7 @@ class ProductionResult extends Component {
                                                                         Shipping
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>
@@ -308,7 +308,7 @@ class ProductionResult extends Component {
                                             <Card>
                                                 <div className="d-flex justify-content-between">
                                                     <div className="p-2 typo-card-title text-uppercase">Rework</div>
-                                                    <Button color="link"><i className="icon-refresh"></i></Button>
+                                                    <Button color="link"><i className="icon-refresh"/></Button>
                                                 </div>
                                                 <CardBlock>
                                                     <Row>
@@ -320,7 +320,7 @@ class ProductionResult extends Component {
                                                                         Product
                                                                     </div>
                                                                     <Button color="link"><i
-                                                                        className="icon-refresh"></i></Button>
+                                                                        className="icon-refresh"/></Button>
                                                                 </div>
                                                                 <CardBlock>
                                                                     <Row>

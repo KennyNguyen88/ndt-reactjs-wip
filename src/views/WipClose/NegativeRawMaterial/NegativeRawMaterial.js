@@ -16,15 +16,21 @@ export default class NegativeRawMaterial extends Component {
         }
     }
 
-    handleRefresh = () => {
-        console.log('handleRefresh');
+    //Life cycles
 
-    };
+    componentWillReceiveProps(nextProps){
+        this.state = {
+            data: nextProps.data
+        };
+        this.setState(prevState => this.state)
+    }
+
+    //Helper
 
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name} handleClick={this.handleRefresh}/>
+                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <NegativeRawMaterialList data={this.state.data} />
                 </CardBlock>
