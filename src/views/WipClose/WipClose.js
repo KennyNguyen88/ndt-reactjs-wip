@@ -24,14 +24,14 @@ import BackFlush from './Backflush/BackFlush';
 import History from './History/History';
 import data from './_data';
 import commonURL from './_url';
-import initData from './_initData';
+import InitData from './_initData';
 
 class WipClose extends Component {
     //Lifecycle
     constructor(props) {
         super(props);
         console.log('WipClose constructor');
-        this.state = initData;
+        this.state = InitData;
     }
 
     componentDidMount() {
