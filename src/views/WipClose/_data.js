@@ -11,27 +11,27 @@ export default {
         data: [
             {
                 name: 'NEW',
-                desc: 'New',
+                description: 'New',
                 total: 10
             },
             {
                 name: 'WIP_READY',
-                desc: 'Wip Ready',
+                description: 'Wip Ready',
                 total: 100
             },
             {
                 name: 'PSV_WIP_C620',
-                desc: 'Shortage Component',
+                description: 'Shortage Component',
                 total: 1000
             },
             {
                 name: '000',
-                desc: 'Complete',
+                description: 'Complete',
                 total: 10000
             },
             {
                 name: 'WIP_CANCEL',
-                desc: 'Wip Cancel',
+                description: 'Wip Cancel',
                 total: 10000
             }
         ]

@@ -134,21 +134,37 @@ class WipClose extends Component {
     };
     doSearch = () => {
         this.searchIfStatus();
-        this.searchOit();
-        this.searchSummary();
-        this.searchNegativeRawMaterial();
-        this.searchTrxCode66();
-        this.searchBackFlush();
-        this.searchHistory();
+        // this.searchOit();
+        // this.searchSummary();
+        // this.searchNegativeRawMaterial();
+        // this.searchTrxCode66();
+        // this.searchBackFlush();
+        // this.searchHistory();
+        // this.test();
+    };
+    test = () => {
+        console.log('TEST');
+        Axios.get('http://localhost:8000/wipclose/ifstatus', {params: {fromDate: "20160901", toDate: "20160930"}})
+        // Axios.get('http://172.27.24.31:8080/YARD/get-yard-start-factory-type')
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => console.log(error));
     };
     searchIfStatus = () => {
-        let fromDate = this.state.Control.fromDate;
-        let toDate = this.state.Control.toDate;
-        console.log('searchIfStatus',fromDate,toDate);
-        Axios.get(commonURL.IfStatus)
+        // let fromDate = this.state.Control.fromDate;
+        // let toDate = this.state.Control.toDate;
+        let fromDate = "20160901";
+        let toDate = "20160930";
+        //console.log(commonURL.IFStatus,fromDate,toDate);
+        Axios.get(commonURL.IFStatus, {params: {fromDate: "20160901", toDate: "20160930"}})
             .then((res) => {
+                console.log(res);
                 this.setState({
-                    IfStatus: res.data.IfStatus
+                    IfStatus: {
+                        name: 'If Status',
+                        data: res.data
+                    }
                 })
             })
             .catch((error) => console.log(error));

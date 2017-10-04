@@ -12,7 +12,7 @@ export default {
         data: [
             {
                 name: ' ',
-                desc: ' ',
+                description: ' ',
                 total: 0
             }
         ]

@@ -14,7 +14,7 @@ const IfStatusList = (props) => {
                     return <IfStatusItem
                         key={index}
                         name={item.name}
-                        desc={item.desc}
+                        desc={item.description}
                         total={item.total}
                         handleClick={() => props.handleItemClickAt(index)}
                     />
