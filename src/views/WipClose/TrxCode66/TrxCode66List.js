@@ -15,6 +15,8 @@ const TrxCode66List = (props) => {
                 return <TrxCode66Item
                     name={item.name}
                     total={item.total}
+                    desc={item.description}
+                    tooltipId={index}
                     key={index}
                 />
             })}

@@ -1,18 +1,16 @@
-/**
- * Created by Trung on 9/23/2017.
- */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ListGroupItem, Badge} from 'reactstrap';
+import {ListGroupItem, Badge, UncontrolledTooltip} from 'reactstrap';
 
 const NegativeRawMaterialItem = (props) => {
     let balance = props.onhand - props.pending;
+    let id = 'Negative'+props.tooltipId;
     return (
-        <ListGroupItem>
+        <ListGroupItem className="animated slideInLeft">
             <div className="d-flex justify-content-between align-items-center">
                 <div>
-                    <p className="mb-0">{props.name}</p>
-                    <p className="mb-0">{props.desc}</p>
+                    <p className="mb-0" id={id}>{props.name}</p>
+                    <UncontrolledTooltip placement="top" target={id}> {props.desc} </UncontrolledTooltip>
                 </div>
                 <div>
                     <div
@@ -27,7 +25,7 @@ const NegativeRawMaterialItem = (props) => {
                     </div>
                     <div className="d-flex justify-content-between align-items-center">
                         <p className="mb-0">Balance: </p>
-                        <Badge color={balance != 0 ? "danger" : "light"}>{balance}</Badge>
+                        <Badge color={balance < 0 ? "danger" : "light"}>{balance}</Badge>
                     </div>
 
                 </div>
@@ -39,7 +37,8 @@ NegativeRawMaterialItem.propTypes = {
     name: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     onhand: PropTypes.number.isRequired,
-    pending: PropTypes.number.isRequired
+    pending: PropTypes.number.isRequired,
+    tooltipId: PropTypes.number.isRequired
 };
 
 export default NegativeRawMaterialItem;

@@ -32,7 +32,7 @@ export default class Oit extends Component {
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
+                <CardTitle name={this.props.name} running={this.props.running} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <OitList data={this.state.data} />
                 </CardBlock>

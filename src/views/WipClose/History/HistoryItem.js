@@ -1,6 +1,3 @@
-/**
- * Created by Trung on 9/23/2017.
- */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ListGroupItem} from 'reactstrap';

@@ -1,6 +1,3 @@
-/**
- * Created by Trung on 9/23/2017.
- */
 //Libs
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
@@ -22,21 +19,25 @@ export default class IFStatus extends Component {
         this.state = {
             data: nextProps.data
         };
+
         this.setState(prevState => this.state)
     }
+
+    //Events
+
+    handleItemClickAt = (code) => {
+        console.log('handleItemClickAt', code);
+        //todo: open modal show detail
+    };
 
     //Helper
 
 
-    handleItemClickAt = index => {
-        console.log('handleItemClickAt', index);
-        //open modal show detail
-    };
 
     render() {
         return (
             <Card>
-                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
+                <CardTitle name={this.props.name} handleClick={this.props.handleRefresh} running={this.props.running}/>
                 <CardBlock>
                     <IfStatusList data={this.state.data} handleItemClickAt={this.handleItemClickAt}/>
                 </CardBlock>

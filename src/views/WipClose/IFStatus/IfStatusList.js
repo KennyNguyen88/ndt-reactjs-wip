@@ -16,7 +16,8 @@ const IfStatusList = (props) => {
                         name={item.name}
                         desc={item.description}
                         total={item.total}
-                        handleClick={() => props.handleItemClickAt(index)}
+                        tooltipId={index}
+                        handleClick={() => props.handleItemClickAt(item.name)}
                     />
                 })
             }

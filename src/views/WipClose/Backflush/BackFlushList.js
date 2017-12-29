@@ -15,6 +15,8 @@ const BackFlushList = (props) => {
                 return <BackFlushItem
                     name={item.name}
                     total={item.total}
+                    desc={item.description}
+                    tooltipId={index}
                     key={index}
                 />
             })}

@@ -9,15 +9,20 @@ import {ListGroup} from 'reactstrap';
 import NegativeRawMaterialItem from './NegativeRawMaterialItem';
 
 const NegativeMaterialList = (props) => {
+
+    let minusOnly = props.data.filter((item) => {
+        return (item.onhand - item.pending) < 0;
+    });
+
     return(
         <ListGroup>
-            {props.data.map((item, index) => {
+            {minusOnly.map((item, index) => {
                 return <NegativeRawMaterialItem
                     name={item.name}
                     desc={item.desc}
                     onhand={item.onhand}
                     pending={item.pending}
-                    balance={item.balance}
+                    tooltipId={index}
                     key={index}
                 />
             })}

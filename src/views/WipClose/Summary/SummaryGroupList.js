@@ -8,11 +8,20 @@ import {ListGroup} from 'reactstrap';
 //Customs
 import SummaryGroupItem from './SummaryGroupItem';
 export default class SummaryGroupList extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
   render(){
       return(
           <ListGroup>
               {this.props.data.map((item, index) => {
-                  return <SummaryGroupItem key={index} name={item.name} total={item.total}/>
+                  return <SummaryGroupItem
+                      key={index}
+                      name={item.name}
+                      total={item.total}
+                      handleClick={() => this.props.handleItemClick(item.name)}/>
               })}
           </ListGroup>
       );

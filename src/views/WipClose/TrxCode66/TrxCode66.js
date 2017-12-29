@@ -1,6 +1,3 @@
-/**
- * Created by Trung on 9/23/2017.
- */
 //Libs
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
@@ -27,10 +24,11 @@ export default class TrxCode66 extends Component {
 
     //Helper
 
+    //Main
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
+                <CardTitle running={this.props.running} name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <TrxCode66List data={this.state.data} />
                 </CardBlock>

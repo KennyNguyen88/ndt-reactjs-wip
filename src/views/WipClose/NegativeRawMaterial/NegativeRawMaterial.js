@@ -30,7 +30,7 @@ export default class NegativeRawMaterial extends Component {
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
+                <CardTitle running={this.props.running} name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <NegativeRawMaterialList data={this.state.data} />
                 </CardBlock>

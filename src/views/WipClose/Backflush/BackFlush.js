@@ -30,7 +30,7 @@ export default class BackFlush extends Component {
     render(){
         return(
             <Card>
-                <CardTitle name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
+                <CardTitle running={this.props.running} name={this.props.name} handleClick={() => this.props.handleRefresh()}/>
                 <CardBlock>
                     <BackFlushList data={this.state.data} />
                 </CardBlock>

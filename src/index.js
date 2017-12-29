@@ -10,7 +10,8 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'simple-line-icons/css/simple-line-icons.css';
 // Import Main styles for this application
 import '../scss/style.scss'
-
+//animate.css
+import 'animate.css';
 // Containers
 import Full from './containers/Full/'
 // const history = createBrowserHistory();
