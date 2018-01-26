@@ -7,12 +7,13 @@ const ProductionResultGroupHeader = (props) => {
             <div className="p-2 typo-card-title text-uppercase">
                 {props.name}
             </div>
-            <div className="p-2">
-                <SwitchButton
-                    onChange={props.handleToggleSwitch}
-                    name={props.switchName}
-                />
-            </div>
+            {/*<div className="p-2">*/}
+                {/*<SwitchButton*/}
+                    {/*onChange={props.handleToggleSwitch}*/}
+                    {/*name={props.switchName}*/}
+                    {/*checked={true}*/}
+                {/*/>*/}
+            {/*</div>*/}
 
         </div>
     )

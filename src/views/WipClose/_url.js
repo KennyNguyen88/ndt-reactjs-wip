@@ -1,20 +1,13 @@
-// export default {
-//     IFStatus: "http://172.27.26.68:8000/wipclose/ifstatus",
-//     Oit: 'http://172.27.26.68:8000/wipclose/oit',
-//     Summary: 'http://172.27.26.68:8000/wipclose/summary',
-//     Negative: 'http://172.27.26.68:8000/wipclose/negative',
-//     TrxCode66: 'http://172.27.26.68:8000/wipclose/trx66',
-//     BackFlush: 'http://172.27.26.68:8000/wipclose/backflush',
-//     UpdateToWipReady: 'http://172.27.26.68:8000/wipclose/summary/wipready',
-//     UpdateToNew: 'http://172.27.26.68:8000/wipclose/summary/new'
-// }
+let localhost = "localhost";
+let sspc = "172.27.26.68";
+let baseLink = localhost;
 export default {
-    IFStatus: "http://localhost:8000/wipclose/ifstatus",
-    Oit: 'http://localhost:8000/wipclose/oit',
-    Summary: 'http://localhost:8000/wipclose/summary',
-    Negative: 'http://localhost:8000/wipclose/negative',
-    TrxCode66: 'http://localhost:8000/wipclose/trx66',
-    BackFlush: 'http://localhost:8000/wipclose/backflush',
-    UpdateToWipReady: 'http://localhost:8000/wipclose/summary/wipready',
-    UpdateToNew: 'http://localhost:8000/wipclose/summary/new'
+    IFStatus: `http://${baseLink}:8000/wipclose/ifstatus`,
+    Oit: `http://${baseLink}:8000/wipclose/oit`,
+    Summary: `http://${baseLink}:8000/wipclose/summary`,
+    Negative: `http://${baseLink}:8000/wipclose/negative`,
+    TrxCode66: `http://${baseLink}:8000/wipclose/trx66`,
+    BackFlush: `http://${baseLink}:8000/wipclose/backflush`,
+    UpdateToWipReady: `http://${baseLink}:8000/wipclose/summary/wipready`,
+    UpdateToNew: `http://${baseLink}:8000/wipclose/summary/new`
 }

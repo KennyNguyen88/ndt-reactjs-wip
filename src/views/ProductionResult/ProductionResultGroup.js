@@ -12,9 +12,9 @@ class ProductionResultGroup extends Component {
     constructor(props){
         super(props);
         this.state = {
-            active: false,
-            erp: 100,
-            mes: 110
+            active: true,
+            erp: 0,
+            mes: 0
         };
     }
 
@@ -22,6 +22,7 @@ class ProductionResultGroup extends Component {
 
     componentWillReceiveProps(nextProp){
         this.state = {
+            ...this.state,
             erp: nextProp.erp,
             mes: nextProp.mes
         };
@@ -48,6 +49,7 @@ class ProductionResultGroup extends Component {
                     name={this.props.name}
                     handleToggleSwitch={(e) => this.handleToggleSwitch(e)}
                     switchName={this.props.switchName}
+                    switchChecked={this.state.active}
                 />
                 <CardBlock>
                     <ProductionResultList erp={this.state.erp} mes={this.state.mes}/>

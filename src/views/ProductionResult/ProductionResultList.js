@@ -6,7 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {ListGroup,ListGroupItem } from 'reactstrap';
 const ProductionResultList = (props) => {
-    let diff = props.erp - props.mes;
+
+    let mesTon = Math.round(props.mes/1000);
+    let diff = props.erp - mesTon;
     return (
         <ListGroup>
             <ListGroupItem>
@@ -18,7 +20,7 @@ const ProductionResultList = (props) => {
             <ListGroupItem>
                 <div className="d-flex justify-content-between align-items-center">
                     <p className="mb-0">MES</p>
-                    <p className="mb-0">{props.mes}</p>
+                    <p className="mb-0">{mesTon}</p>
                 </div>
             </ListGroupItem>
             <ListGroupItem className={diff != 0 ? "different" : ""}>

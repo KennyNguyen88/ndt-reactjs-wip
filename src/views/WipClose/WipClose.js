@@ -576,7 +576,7 @@ class WipClose extends Component {
     checkRequestEror = (error) => {
         console.log(error);
         if(error.request){
-          this.doFeedBack('Request cannot be sent or server cannot be reached !');
+            this.doFeedBack('Request cannot be sent or server cannot be reached !');
         }
     };
 

@@ -5,6 +5,15 @@ import {ListGroupItem, Button, UncontrolledTooltip} from 'reactstrap';
 const IfStatusItem = (props) =>  {
 
     let isDisable = (props.name === 'WIP_CANCEL' || props.name === '000');
+    let color = "";
+    if (props.name === 'WIP_CANCEL' || props.name === '000'){
+        color = "secondary"; //grey
+    }
+    else if(props.name === 'WIP_READY' || props.name === 'NEW'){
+        color = "success"; //green
+    }else{
+        color = "danger";
+    }
     let id = 'IfStatusItem'+props.tooltipId;
     return (
         <ListGroupItem className="animated slideInLeft">
@@ -15,7 +24,7 @@ const IfStatusItem = (props) =>  {
                     <UncontrolledTooltip placement="top" target={id}> {props.desc} </UncontrolledTooltip>
                 </div>
                 <Button
-                    color="primary"
+                    color={color}
                     size="sm"
                     disabled={isDisable}
                     onClick={props.handleClick}>{props.total}</Button>
