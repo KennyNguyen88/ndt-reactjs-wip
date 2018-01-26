@@ -34,11 +34,13 @@ export default class Summary extends Component {
         return 0;
     };
 
-    getTotalAvailable = (commons) => {
-        if (commons.length > 0) {
-            let ta = commons.filter(common => common.name === "TOTAL_AVAILABLE");
-            if (ta.length > 0)
-                return ta[0].total;
+    getTotalAvailable = (summaries) => {
+        if (summaries.length > 0) {
+            let notcom = summaries.filter(summary => summary.group !== "COMMON");
+            if (notcom.length > 0)
+                return notcom.reduce((count, step) => {
+                    return count + step.total;
+                },0);
         }
         return 0;
     };
@@ -58,18 +60,28 @@ export default class Summary extends Component {
         let filterFinishedGoods = [];
         let filterReworks = [];
         let filterShippings = [];
+        let numberOfWipReady = 0;
+        let numberOfTotalAvailable = 0;
+        let numberOfTotalReady = 0;
+        const GROUP = {
+            COMMON: "COMMON",
+            SEMI_PRODUCT: "SEMI PRODUCT",
+            FINISHED_GOOD: "FINISHED GOOD",
+            REWORK: "REWORK",
+            SHIPPING: "SHIPPING"
+        };
 
         if (this.isStateHaveData()){
             const summaries = this.state.data;
-            filterCommons = summaries.filter(summary => summary.group === "COMMON");
-            filterSemiProducts = summaries.filter(summary => summary.group === "SEMI PRODUCT");
-            filterFinishedGoods = summaries.filter(summary => summary.group === "FINISHED GOOD");
-            filterReworks = summaries.filter(summary => summary.group === "REWORK");
-            filterShippings = summaries.filter(summary => summary.group === "SHIPPING");
-
+            filterCommons = summaries.filter(summary => summary.group === GROUP.COMMON);
+            filterSemiProducts = summaries.filter(summary => summary.group === GROUP.SEMI_PRODUCT);
+            filterFinishedGoods = summaries.filter(summary => summary.group === GROUP.FINISHED_GOOD);
+            filterReworks = summaries.filter(summary => summary.group === GROUP.REWORK);
+            filterShippings = summaries.filter(summary => summary.group === GROUP.SHIPPING);
+            numberOfWipReady = this.getToWipReady(filterCommons);
+            numberOfTotalAvailable = this.getTotalAvailable(summaries);
+            numberOfTotalReady = this.getTotalReady(filterCommons);
         }
-
-        let numberOfWipReady = this.getToWipReady(filterCommons);
 
         return (
             <Card>
@@ -77,15 +89,15 @@ export default class Summary extends Component {
                 <div className="d-flex justify-content-between align-items-center p-2">
                     <Button color="primary" onClick={() => this.props.handleToWipReady(numberOfWipReady)}>TO WIP_READY {numberOfWipReady}</Button>
                     <div className="text-right">
-                        <p>TOTAL AVAILABLE: {this.getTotalAvailable(filterCommons)}</p>
-                        <p className="mb-0">TOTAL READY: {this.getTotalReady(filterCommons)}</p>
+                        <p>TOTAL AVAILABLE: {numberOfTotalAvailable}</p>
+                        <p className="mb-0">TOTAL READY: {numberOfTotalReady}</p>
                     </div>
                 </div>
                 <Row className="p-3">
-                    <SummaryGroup name={"SEMI PRODUCT"} data={filterSemiProducts} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
-                    <SummaryGroup name={"FINISHED GOOD"} data={filterFinishedGoods} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
-                    <SummaryGroup name={"REWORK"} data={filterReworks} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
-                    <SummaryGroup name={"SHIPPING"} data={filterShippings} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
+                    <SummaryGroup name={GROUP.SEMI_PRODUCT} data={filterSemiProducts} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
+                    <SummaryGroup name={GROUP.FINISHED_GOOD} data={filterFinishedGoods} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
+                    <SummaryGroup name={GROUP.REWORK} data={filterReworks} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
+                    <SummaryGroup name={GROUP.SHIPPING} data={filterShippings} handleItemClick={(groupName, itemName) => this.props.handleItemUpdateClick(groupName, itemName)}/>
                 </Row>
             </Card>
         );
