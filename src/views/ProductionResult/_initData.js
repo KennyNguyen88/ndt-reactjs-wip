@@ -45,8 +45,8 @@ export default {
                 {
                     name: "Return",
                     switchName: "SteelMaking-FinishedGood-Return",
-                    erp: 100,
-                    mes: 100
+                    erp: 0,
+                    mes: 0
                 }
             ]
         },

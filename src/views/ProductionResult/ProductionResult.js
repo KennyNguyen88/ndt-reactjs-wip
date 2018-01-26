@@ -28,7 +28,6 @@ class ProductionResult extends Component {
 
     componentDidMount() {
         console.log('componentDidMount');
-        // set default data for fromdate todate : 0106 ~ 0205 --> 01, from 0101 to 0131
         this.setDefaultControl();
         // get data with default setting
         this.doSearch();
@@ -53,8 +52,8 @@ class ProductionResult extends Component {
 
     setDefaultControl = () => {
         let current = new Date();
-        var currentYear = current.getFullYear();
-        var currentMonth = current.getMonth(); //Month from 0
+        let currentYear = current.getFullYear();
+        let currentMonth = current.getMonth(); //Month from 0
         let currentDay = current.getDate();
 
         if (currentDay < 6) {
